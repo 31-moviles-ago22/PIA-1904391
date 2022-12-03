@@ -1,7 +1,5 @@
 {
-  "name": "APP",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
+    "name": "PIA",
+    "integrations": {},
+    "type": "angular"
 }

@@ -1,33 +1,42 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
-
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AngularFireModule } from '@angular/fire/compat';
-import { environment } from 'src/environments/environment';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AppComponent } from './app.component';
+import { EncabezadoComponent } from './encabezado/encabezado.component';
+import { IonicModule } from '@ionic/angular';
+import { ArticulosComponent } from './articulos/articulos.component';
+import { FooterComponent } from './footer/footer.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { ArticuloDetalleComponent } from './articulo-detalle/articulo-detalle.component';
+import { CarritoComponent } from './carrito/carrito.component';
+import { ElectronicosComponent } from './electronicos/electronicos.component';
+import { DeportesComponent } from './deportes/deportes.component';
+import { LibrosComponent } from './libros/libros.component';
+
 
 
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule, 
-    IonicModule.forRoot(), 
-    AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule,
-    AngularFireStorageModule,
-    AngularFireAuthModule
+  declarations: [
+    AppComponent,
+    EncabezadoComponent,
+    ArticulosComponent,
+    FooterComponent,
+    InicioComponent,
+    ArticuloDetalleComponent,
+    CarritoComponent,
+    ElectronicosComponent,
+    DeportesComponent,
+    LibrosComponent
     
-
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    IonicModule.forRoot()
+  ],
+  
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
